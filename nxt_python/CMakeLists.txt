@@ -19,6 +19,19 @@ set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 #set the default path for built libraries to the "lib" directory
 set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
 
+
+include(ExternalProject)
+
+ExternalProject_Add( nxt-python
+  PREFIX nxt-python
+  GIT_REPOSITORY https://github.com/chalko/ros-nxt.git
+  BUILD_IN_SOURCE
+  BUILD_COMMAND cmake --build .
+  INSTALL_COMMAND ""
+)
+
+
+
 # catkin_package parameters: http://ros.org/doc/groovy/api/catkin/html/dev_guide/generated_cmake_api.html#catkin-package
 # TODO: fill in what other packages will need to use this package
 catkin_package(
