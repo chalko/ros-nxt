@@ -21,16 +21,16 @@ set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 #set the default path for built libraries to the "lib" directory
 set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
 
-set(SOURCE_FILES src/nxt_ultrasonic_display.cpp
-                 src/nxt_color_display.cpp 
-                 src/init.cpp)
+#set(SOURCE_FILES src/nxt_ultrasonic_display.cpp
+#                 src/nxt_color_display.cpp 
+#                 src/init.cpp)
 
 
 include(CMakeDetermineSystem)
 if(CMAKE_SYSTEM_NAME MATCHES "Darwin")
-  add_library(${PROJECT_NAME} MODULE ${SOURCE_FILES})
+#  add_library(${PROJECT_NAME} MODULE ${SOURCE_FILES})
 else(CMAKE_SYSTEM_NAME MATCHES "Darwin")
-  add_library(${PROJECT_NAME} ${SOURCE_FILES})
+#  add_library(${PROJECT_NAME} ${SOURCE_FILES})
 endif(CMAKE_SYSTEM_NAME MATCHES "Darwin")
 
 find_package(wxWidgets REQUIRED)
@@ -41,10 +41,10 @@ include_directories( ${wxWidgets_INCLUDE_DIRS} )
 #include_directories( ${OGRE_INCLUDE_DIRS} )
 #link_directories( ${OGRE_LIBRARY_DIRS} )
 
-target_link_libraries(${PROJECT_NAME} ${wxWidgets_LIBRARIES} )
+#target_link_libraries(${PROJECT_NAME} ${wxWidgets_LIBRARIES} )
 find_package(Boost REQUIRED COMPONENTS thread)
 include_directories(${Boost_INCLUDE_DIRS})
-target_link_libraries(${PROJECT_NAME} ${Boost_LIBRARIES})
+#target_link_libraries(${PROJECT_NAME} ${Boost_LIBRARIES})
 
 
 #common commands for building c++ executables and libraries
