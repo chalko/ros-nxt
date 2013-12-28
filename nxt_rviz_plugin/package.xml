@@ -2,14 +2,14 @@
   <name>nxt_rviz_plugin</name>
   <version>1.0.0</version>
   <description>nxt_rviz_plugin provides plugins for rviz for visualizing data coming from the nxt sensors.</description>
-  <maintainer email="">Melonee Wise</maintainer>
+  <maintainer email="nobody@example.com">Melonee Wise</maintainer>
 
   <license>BSD</license>
 
   <url type="website">http://ros.org/wiki/nxt_rviz_plugin</url>
   <!-- <url type="bugtracker"></url> -->
 
-  <author>Melonee Wise</author>
+  <author email="nobody@example.com">Melonee Wise</author>
 
   <!-- Dependencies which this package needs to build itself. -->
   <buildtool_depend>catkin</buildtool_depend>
@@ -37,3 +37,4 @@
 </export>
 
 </package>
+

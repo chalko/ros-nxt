@@ -9,7 +9,7 @@
      purpose joint position controller that commnads a joint to a
      desired position by sending effort commands to the joint and
      reading the joint encoders.</description>
-  <maintainer email="">Wim Meeussen</maintainer>
+  <maintainer email="nobody@example.com">Wim Meeussen</maintainer>
 
   <license>BSD</license>
 
@@ -49,3 +49,4 @@
   <!-- <test_depend>kdl</test_depend> -->
 
 </package>
+

@@ -10,7 +10,7 @@
      the Bluetooth connection is currently too slow to be very
      useful).  Binding an NXT robot to ROS only requires a single
      configuration file.</description>
-  <maintainer email="">Wim Meeussen</maintainer>
+  <maintainer email="nobody@example.com">Wim Meeussen</maintainer>
 
   <license>BSD</license>
 

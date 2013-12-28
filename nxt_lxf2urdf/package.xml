@@ -2,7 +2,7 @@
   <name>nxt_lxf2urdf</name>
   <version>1.0.0</version>
   <description>nxt_lxf2urdf converts a</description>
-  <maintainer email="">Melonee Wise</maintainer>
+  <maintainer email="nobody@example.com">Melonee Wise</maintainer>
 
   <license>BSD</license>
 
@@ -21,3 +21,4 @@
   <!-- Dependencies needed only for running tests. -->
 
 </package>
+

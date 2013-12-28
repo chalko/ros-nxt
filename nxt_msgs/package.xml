@@ -2,7 +2,7 @@
   <name>nxt_msgs</name>
   <version>1.0.0</version>
   <description>The nxt_msgs package contains a set of messages to publish data coming from various NXT sensor.</description>
-  <maintainer email="">Wim Meeussen</maintainer>
+  <maintainer email="nobody@example.com">Wim Meeussen</maintainer>
 
   <license>BSD</license>
 
