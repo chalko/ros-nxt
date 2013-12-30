@@ -27,8 +27,8 @@ ExternalProject_Add( nxt_python_src
   GIT_TAG mine
   CONFIGURE_COMMAND ""
   BUILD_IN_SOURCE 1
-  BUILD_COMMAND ""
-  INSTALL_COMMAND python setup.py install 
+  BUILD_COMMAND "" 
+  INSTALL_COMMAND python setup.py build  --build-base /home/nick/dev/nxt_ws/build/nxt/nxt_python install --install-layout=deb --prefix=/home/nick/dev/nxt_ws/install --install-scripts=/home/nick/dev/nxt_ws/install/bin
 )
 
 
@@ -43,7 +43,7 @@ catkin_package(
     LIBRARIES nxt_python_src # TODO
 )
 
-catkin_python_setup()
+#catkin_python_setup()
 
 #install(PROGRAMS scripts/myscript
 #  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
