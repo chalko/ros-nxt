@@ -1,7 +1,6 @@
 # Catkin User Guide: http://www.ros.org/doc/groovy/api/catkin/html/user_guide/user_guide.html
 # Catkin CMake Standard: http://www.ros.org/doc/groovy/api/catkin/html/user_guide/standards.html
 cmake_minimum_required(VERSION 2.8.3)
-project(nxt_python)
 # Load catkin and all dependencies required for this package
 find_package(catkin )
 
@@ -22,22 +21,29 @@ set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
 
 include(ExternalProject)
 
-ExternalProject_Add( nxt-python
-  PREFIX nxt-python
-  GIT_REPOSITORY https://github.com/chalko/ros-nxt.git
-  BUILD_IN_SOURCE
-  BUILD_COMMAND cmake --build .
-  INSTALL_COMMAND ""
+ExternalProject_Add( nxt_python_src
+  PREFIX nxt_python_src
+  GIT_REPOSITORY https://github.com/chalko/nxt-python.git
+  GIT_TAG mine
+  CONFIGURE_COMMAND ""
+  BUILD_IN_SOURCE 1
+  BUILD_COMMAND ""
+  INSTALL_COMMAND python setup.py install 
 )
 
 
+project(nxt_python)
 
 # catkin_package parameters: http://ros.org/doc/groovy/api/catkin/html/dev_guide/generated_cmake_api.html#catkin-package
 # TODO: fill in what other packages will need to use this package
 catkin_package(
-    DEPENDS rospy python-usb python-bluez unzip
+    DEPENDS rospy python-usb python-bluez unzip nxt_python_src
     CATKIN_DEPENDS # TODO
     INCLUDE_DIRS # TODO include
-    LIBRARIES # TODO
+    LIBRARIES nxt_python_src # TODO
 )
 
+catkin_python_setup()
+
+#install(PROGRAMS scripts/myscript
+#  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
