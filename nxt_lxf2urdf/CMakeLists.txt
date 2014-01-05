@@ -31,3 +31,9 @@ catkin_package(
     INCLUDE_DIRS # TODO include
     LIBRARIES # TODO
 )
+
+
+#catkin_python_setup()
+
+install(PROGRAMS scripts/nxt_test
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
