@@ -22,3 +22,6 @@ catkin_package(
 
 install(PROGRAMS scripts/nxt_ros.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+  
+install(PROGRAMS scripts/joint_states_aggregator.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}  
