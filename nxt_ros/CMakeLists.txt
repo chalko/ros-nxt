@@ -18,3 +18,7 @@ catkin_package(
     INCLUDE_DIRS # TODO include
     LIBRARIES # TODO
 )
+
+
+install(PROGRAMS scripts/nxt_ros.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
