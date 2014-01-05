@@ -27,3 +27,9 @@ catkin_package(
     INCLUDE_DIRS # TODO include
     LIBRARIES # TODO
 )
+
+#catkin_python_setup()
+
+install(PROGRAMS scripts/base_controller.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+
