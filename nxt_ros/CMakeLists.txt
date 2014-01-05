@@ -5,7 +5,6 @@ project(nxt_ros)
 find_package(catkin REQUIRED COMPONENTS rospy nxt_python sensor_msgs nxt_msgs)
 
 # catkin_package parameters: http://ros.org/doc/groovy/api/catkin/html/dev_guide/generated_cmake_api.html#catkin-package
-# TODO: fill in what other packages will need to use this package
 catkin_package(
     DEPENDS rospy nxt_python sensor_msgs nxt_msgs
 )
