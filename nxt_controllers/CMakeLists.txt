@@ -28,8 +28,8 @@ catkin_package(
     LIBRARIES # TODO
 )
 
-#catkin_python_setup()
+catkin_python_setup()
 
-install(PROGRAMS scripts/base_controller.py
-  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+#install(PROGRAMS scripts/base_controller.py
+#  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
 
